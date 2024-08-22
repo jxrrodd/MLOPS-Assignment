@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Anomalies</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Anomalies</h1>
+        <form action="/predict" method="post">
+            <label for="FISCAL_YR">Fiscal Year:</label>
+            <input type="number" id="FISCAL_YR" name="FISCAL_YR" required>
+
+            <label for="FISCAL_MTH">Fiscal Month:</label>
+            <input type="number" id="FISCAL_MTH" name="FISCAL_MTH" required>
+
+            <label for="DIV_NAME">Division Name:</label>
+            <input type="text" id="DIV_NAME" name="DIV_NAME" required>
+
+            <label for="MERCHANT">Merchant:</label>
+            <input type="text" id="MERCHANT" name="MERCHANT" required>
+
+            <label for="CAT_DESC">Category Description:</label>
+            <input type="text" id="CAT_DESC" name="CAT_DESC" required>
+
+            <label for="AMT">Amount:</label>
+            <input type="number" id="AMT" name="AMT" required>
+
+            <label for="Year">Year:</label>
+            <input type="number" id="Year" name="Year" required>
+
+            <label for="Month">Month:</label>
+            <input type="number" id="Month" name="Month" required>
+
+            <label for="DayOfWeek">Day of Week:</label>
+            <input type="number" id="DayOfWeek" name="DayOfWeek" required>
+
+            <label for="FiscalQuarter">Fiscal Quarter:</label>
+            <input type="number" id="FiscalQuarter" name="FiscalQuarter" required>
+
+            <input type="submit" value="Predict">
+        </form>
+        {% if prediction_text %}
+            <p class="error">{{ prediction_text }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
