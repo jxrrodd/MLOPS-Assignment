@@ -1,8 +1,6 @@
 from flask import Flask, request, render_template
-import mlflow.pyfunc
 import pandas as pd
 import joblib
-import os
 
 app = Flask(__name__)
 
