@@ -7,8 +7,7 @@ import os
 app = Flask(__name__)
 
 # Load the model and encoders
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
-model = mlflow.pyfunc.load_model('runs:/d2f96225d97a42b4835f1a68942e5a79/model')
+model = joblib.load('final_iforest_model.pkl')
 div_name_encoder = joblib.load('div_name_encoder.pkl')
 merchant_encoder = joblib.load('merchant_encoder.pkl')
 cat_desc_encoder = joblib.load('cat_desc_encoder.pkl')
