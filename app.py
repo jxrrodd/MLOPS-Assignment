@@ -1,6 +1,8 @@
 from flask import Flask, request, render_template
 import pandas as pd
 import joblib
+import os
+print(os.getcwd())
 
 app = Flask(__name__)
 
@@ -60,4 +62,4 @@ def encode_input(input_value, encoder, input_name):
         return -1  # Assign an "Unknown" category label or a default encoding
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True)

@@ -34,7 +34,7 @@ label {
     color: #555555;
 }
 
-input[type="text"], input[type="number"], input[type="submit"] {
+input[type="text"], input[type="number"], input[type="float"], input[type="submit"] {
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #cccccc;
